@@ -54,7 +54,49 @@ RSpec.describe Cell do
     expect(cell.ship.health).to eq(2)
     expect(cell.fired_upon?).to eq(true)
   end
+  
+  it "Test 8: cell will render" do
+    cell_1 = Cell.new("B4")
+    
+    expect(cell_1.render).to eq(".")
+  end
 
+  it "Test 9: cell will render when fired upon" do
+    cell_1 = Cell.new("B4")
+    cell_1.fire_upon
+    
+    expect(cell_1.render).to eq("M")
+  end
+  
+  it "Test 10: cell will render with debug S" do
+    cell_2 = Cell.new("C3")
+    cruiser = Ship.new("Cruiser", 3)
+    cell_2.place_ship(cruiser)
+
+    expect(cell_2.render).to eq(".")
+    expect(cell_2.render(true)).to eq("S")
+  end
+  
+  it "Test 11: cell will render ship hit" do
+    cell_2 = Cell.new("C3")
+    cruiser = Ship.new("Cruiser", 3)
+    cell_2.place_ship(cruiser)  
+    cell_2.fire_upon
+    
+    expect(cell_2.render).to eq("H")
+    expect(cruiser.sunk?).to eq(false)
+  end
+  
+  it "Test 12: cell will render ship sunk" do
+    cell_2 = Cell.new("C3")
+    cruiser = Ship.new("Cruiser", 3)
+    cell_2.place_ship(cruiser)
+    cell_2.fire_upon
+    2.times {cruiser.hit}
+    
+    expect(cell_2.render).to eq("X")
+    expect(cruiser.sunk?).to eq(true)
+  end
   
 end
 
