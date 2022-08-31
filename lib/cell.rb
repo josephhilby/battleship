@@ -5,32 +5,32 @@ class Cell
     @ship = ship
     @fired_upon = false
   end
-  
+
   def empty?
     if @ship == nil
       true
-    else 
+    else
       false
     end
   end
-  
+
   def place_ship(ship_obj)
     @ship = ship_obj
   end
-  
+
   def fired_upon?
     @fired_upon
   end
-  
+
   def fire_upon
     if @ship != nil
       ship.hit
       @fired_upon = true
-    else 
+    else
       @fired_upon = true
     end
   end
-  
+
   def render(value = false)
     if value && self.empty? == false
       return "S"
