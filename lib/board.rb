@@ -26,19 +26,26 @@ class Board
   end
 
   def valid_placement?(ship, coord_array)
-    # coord are in board
-    coord_array.find do |coord|
-      valid_coordinate?(coord) == false
-    end
-    # coord fit ship
-    coord_array.length == ship.length
-    # coord cant fit 2 ship
-    coord_array.find do |coord|
-      @cells[coord].empty?
-    end
-    # coord must be in a row or column
-    coord_array.map do |coord|
-      coord.chars
-    end
+    binding.pry
+    coord_array.sort!
+    length_fit = coord_array.length == ship.length
+    no_other_ship = coord_array.count {|coord| @cells[coord].empty?} == coord_array.length
+    check_coord = coord_array.map {|coord| coord.chars}
+    in_row = check_coord.all? {|nest_arr| check_coord[0][0] == nest_arr[0]} && check_coord.all? {|first, second| first[1].to_i + 1 == second[1]}
+    in_column = check_coord.all? {|nest_arr| check_coord[0][1] == nest_arr[1]} &&
+
+
+
+    if length_fit && no_other_ship
   end
 end
+
+
+# coord are in board, probibly not needed because of valid_coord method
+    # coord_array.find do |coord|
+    #   valid_coordinate?(coord) == false
+    # end
+    #     ord_value_array = coord_array.map {|coord| coord.chars}.map do |coord|
+    #   coord[0].ord
+    # end
+    # ord_value = ord_value_array == ord_value_array.sort
