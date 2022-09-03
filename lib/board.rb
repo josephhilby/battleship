@@ -28,7 +28,7 @@ class Board
   def place(ship, coord_array)
     if valid_placement?(ship, coord_array)
       coord_array.each do |coord|
-        if valid_coordinate?(coord) && 
+        if valid_coordinate?(coord) &&
           @cells[coord].place_ship(ship)
         end
       end

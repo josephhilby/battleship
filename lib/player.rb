@@ -7,14 +7,14 @@ class Player
     @cpu = cpu
     @cpu_moves = @board.cells.keys
   end
-  
+
   def cpu_move
     if @cpu
       @cpu_moves.shuffle!
       @cpu_moves.pop
     end
   end
-  
+
   def player_move
     puts "Enter the coordinate for your shot:"
     loop do
