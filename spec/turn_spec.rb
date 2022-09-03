@@ -36,11 +36,46 @@ RSpec.describe Turn do
     expect(player_1.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
   end
 
-  it "Test 4: will call for player input" do
+  # it "Test#: will render player and computer moves" do
+  #   player_1 = Player.new
+  #   player_cpu = Player.new(true)
+  #   turn = Turn.new(player_1, player_cpu)
 
+  #   player_cpu.board.place(cruiser, ["A1", "A2", "A3"])
+  #   player_1.board.place(cruiser, ["A1", "A2", "A3"])
+
+  #   allow(player_1.move).to recieve("A1").and_return(player_cpu.cruiser.hit)
+
+  # end
+
+  # it "Test#: will render both boards in debug mode" do
+  #   player_1 = Player.new
+  #   player_cpu = Player.new(true)
+  #   turn = Turn.new(player_1, player_cpu)
+
+  #   player_cpu.board.place(cruiser, ["A1", "A2", "A3"])
+  #   player_1.board.place(cruiser, ["A1", "A2", "A3"])
+
+  #   expect(player_cpu.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
+  #   expect(player_1.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
+  # end
+
+  it "Test 4: will call for player input" do
+    player_1 = Player.new
+    player_cpu = Player.new(true)
+    turn = Turn.new(player_1, player_cpu)
+
+    expect(turn.start).to eq("")
   end
 
   it "Test 5: will print move results" do
+    player_1 = Player.new
+    player_cpu = Player.new(true)
+    turn = Turn.new(player_1, player_cpu)
+
+    player_cpu.board.place(cruiser, ["A1", "A2", "A3"])
+    player_1.board.place(cruiser, ["A1", "A2", "A3"])
+
 
   end
 
