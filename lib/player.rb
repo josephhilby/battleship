@@ -1,5 +1,4 @@
 class Player
-  #may need attr_accessor for :board
   attr_reader :cpu, :board, :cruiser, :submarine
   def initialize(cpu = false)
     @board = Board.new
@@ -8,14 +7,14 @@ class Player
     @cpu = cpu
     @cpu_moves = @board.cells.keys
   end
-
+  
   def cpu_move
     if @cpu
       @cpu_moves.shuffle!
       @cpu_moves.pop
     end
   end
-
+  
   def player_move
     puts "Enter the coordinate for your shot:"
     loop do
