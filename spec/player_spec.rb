@@ -45,5 +45,4 @@ RSpec.describe Player do
     2.times {player_1.submarine.hit}
     expect(player_1.has_lost?).to eq(true)
   end
-  
 end
