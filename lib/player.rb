@@ -15,8 +15,19 @@ class Player
     end
   end
   
+  def player_move
+    puts "Enter the coordinate for your shot:"
+    loop do
+      player_move = gets.chomp
+      if @board.valid_coordinate?(player_move)
+        return player_move
+      else
+        puts "Please enter a valid coordinate:"
+      end
+    end
+  end
+
   def has_lost?
     @cruiser.health == 0 && @submarine.health == 0
   end
-  
 end
