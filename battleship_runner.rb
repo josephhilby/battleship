@@ -9,4 +9,7 @@ require './lib/game'
 
 game = Game.new
 
+# Un-comment to enter debug mode
+game.debug_mode(true)
+
 game.start

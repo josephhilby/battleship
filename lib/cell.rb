@@ -32,7 +32,11 @@ class Cell
   end
 
   def render(value = false)
-    if value && self.empty? == false
+    if value && @fired_upon == true && @ship != nil && ship.sunk? == true
+      return "X"
+    elsif value && @fired_upon == true && self.empty? == false
+      return "H"
+    elsif value && self.empty? == false
       return "S"
     elsif @fired_upon == false
       return "."

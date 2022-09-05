@@ -47,6 +47,13 @@ class Turn
     "#{@player_one.board.render(true)}"
   end
 
+  def debug_turn_render_result
+    "=============COMPUTER BOARD=============\n" +
+    "#{@player_cpu.board.render(true)}" +
+    "==============PLAYER BOARD==============\n" +
+    "#{@player_one.board.render(true)}"
+  end
+
   def game_loss?
     if @player_one.has_lost?
       puts "I won!"
