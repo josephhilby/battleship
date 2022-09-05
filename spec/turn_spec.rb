@@ -102,16 +102,3 @@ RSpec.describe Turn do
     expect(turn.game_loss?).to eq("You won!")
   end
 end
-
-# Move test to Game class debug mode once made
-  # it "Test 4: will render both boards in debug mode" do
-  #   player_1 = Player.new
-  #   player_cpu = Player.new(true)
-  #   turn = Turn.new(player_1, player_cpu)
-
-  #   player_cpu.board.place(cruiser, ["A1", "A2", "A3"])
-  #   player_1.board.place(cruiser, ["A1", "A2", "A3"])
-
-  #   expect(player_cpu.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
-  #   expect(player_1.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
-  # end
