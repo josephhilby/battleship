@@ -18,7 +18,7 @@ class Player
   def player_move
     puts "Enter the coordinate for your shot:"
     loop do
-      player_move = gets.chomp
+      player_move = gets.chomp.upcase
       if @board.valid_coordinate?(player_move)
         return player_move
       else
