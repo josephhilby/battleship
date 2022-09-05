@@ -8,5 +8,8 @@ require './lib/turn'
 require './lib/game'
 
 game = Game.new
+# binding.pry
+
+# game.debug_mode(true)
 
 game.start

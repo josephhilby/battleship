@@ -1,5 +1,5 @@
 class Player
-  attr_reader :cpu, :board, :cruiser, :submarine
+  attr_reader :cpu, :board, :cruiser, :submarine, :cpu_moves
   def initialize(cpu = false)
     @board = Board.new
     @cruiser = Ship.new("Cruiser", 3)
