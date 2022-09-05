@@ -59,6 +59,9 @@ class Turn
       puts "I won!"
     elsif @player_cpu.has_lost?
       puts "You won!"
+      #"You won!" just added for Test 6. To avoid nil from puts.
+    else
+      false
     end
   end
 end

@@ -32,7 +32,7 @@ RSpec.describe Turn do
     player_cpu.board.place(player_cpu.cruiser, ["A1", "A2", "A3"])
     player_1.board.place(player_1.cruiser, ["A1", "A2", "A3"])
 
-    expect(turn.turn_render).to eq("=============COMPUTER BOARD=============\n" + "  1 2 3 4 \nA . . . . \nB . . . . \nC . . . . \nD . . . . \n" + "==============PLAYER BOARD==============\n" + "  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
+    expect(turn.turn_render_result).to eq("=============COMPUTER BOARD=============\n" + "  1 2 3 4 \nA . . . . \nB . . . . \nC . . . . \nD . . . . \n" + "==============PLAYER BOARD==============\n" + "  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
   end
 
   it "Test 4: will print player and computer moves" do

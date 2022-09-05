@@ -34,12 +34,11 @@ RSpec.describe Game do
   it "Test 4: will render both boards in debug mode" do
     game = Game.new
     game.debug_mode(true)
-    binding.pry
 
-    game.player_cpu.board.place(player_cpu.cruiser, ["A1", "A2", "A3"])
-    game.player_1.board.place(player_1.cruiser, ["A1", "A2", "A3"])
+    game.player_cpu.board.place(game.player_cpu.cruiser, ["A1", "A2", "A3"])
+    game.player_one.board.place(game.player_one.cruiser, ["A1", "A2", "A3"])
 
-    expect(player_cpu.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
-    expect(player_1.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
+    expect(game.player_cpu.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
+    expect(game.player_one.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
   end
 end
