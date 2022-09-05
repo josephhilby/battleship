@@ -8,13 +8,6 @@ class Turn
     @cpu_move = nil
   end
 
-  # def turn_render
-  #   "=============COMPUTER BOARD=============\n" +
-  #   "#{@player_cpu.board.render}" +
-  #   "==============PLAYER BOARD==============\n" +
-  #   "#{@player_one.board.render(true)}"
-  # end
-
   def cpu_turn
     @cpu_move = player_cpu.cpu_move
   end
@@ -24,7 +17,7 @@ class Turn
   end
 
   def cpu_turn_result(cpu_move)
-    if @player_one.board.cells[cpu_move].empty?
+    if @player_one.board.cells[cpu_move].empty? && !@player_one.board.cells[cpu_move].fired_upon?
       @player_one.board.cells[cpu_move].fire_upon
       "My shot on #{cpu_move} was a miss."
     elsif !@player_one.board.cells[cpu_move].fired_upon?
