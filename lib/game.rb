@@ -30,6 +30,10 @@ class Game
       end
   end
 
+  # In testing cpu places ship with counter at around 100-200. Will need to refactor
+  # if ship is bigger or more than 2 ships are used. If counter is reached, cpu will
+  # select 3 bad coord and not place ship. Game is then unwinnable for player.
+  # Currently this is unlikely, as 16 ** 3 == 4_096 and counter can go to 100_000.
   def place_cruiser
     counter = 0
     until @player_cpu.board.valid_placement?(@player_cpu.cruiser, [@first_cell, @second_cell, @third_cell])
@@ -69,7 +73,7 @@ class Game
     puts @player_one.board.render
     puts "Enter the coordinates for the Cruiser (3 spaces):"
     @player_cruiser_input = gets.chomp.upcase.split
-    until @player_one.board.valid_placement?(@player_one.cruiser, @player_cruiser_input) && @player_cruiser_input.all? {|coord| @player_one.board.valid_coordinate?(coord)}
+    until @player_cruiser_input.length == 3 && @player_cruiser_input.all? {|coord| @player_one.board.valid_coordinate?(coord)} && @player_one.board.valid_placement?(@player_one.cruiser, @player_cruiser_input)
       puts "I'm sorry, that was not a valid position. Please try again."
       puts "Enter the coordinates for the Cruiser (3 spaces):"
       @player_cruiser_input = gets.chomp.upcase.split
@@ -82,7 +86,7 @@ class Game
     puts @player_one.board.render(true)
     puts "Enter the coordinates for the Submarine (2 spaces):"
     @player_submarine_input = gets.chomp.upcase.split
-    until @player_one.board.valid_placement?(@player_one.submarine, @player_submarine_input) && @player_submarine_input.all? {|coord| @player_one.board.valid_coordinate?(coord)}
+    until @player_submarine_input.length == 2 && @player_submarine_input.all? {|coord| @player_one.board.valid_coordinate?(coord)} && @player_one.board.valid_placement?(@player_one.submarine, @player_submarine_input)
       puts "I'm sorry, that was not a valid position. Please try again."
       puts "Enter the coordinates for the Submarine (2 spaces):"
       @player_submarine_input = gets.chomp.upcase.split
