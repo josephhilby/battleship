@@ -39,6 +39,7 @@ class Board
     cell_render = @cells.values.map do |value|
       value.render(is)
     end
+    # Look at Reduce
     "  1 2 3 4 \n" +
     "A #{cell_render[0]} #{cell_render[1]} #{cell_render[2]} #{cell_render[3]} \n" +
     "B #{cell_render[4]} #{cell_render[5]} #{cell_render[6]} #{cell_render[7]} \n" +
@@ -46,11 +47,13 @@ class Board
     "D #{cell_render[12]} #{cell_render[13]} #{cell_render[14]} #{cell_render[15]} \n"
   end
 
+  # split methods in_row, in_column, etc
   def valid_placement?(ship, coord_array)
     coord_array.sort!
     length_fit = coord_array.length == ship.length
     no_other_ship = coord_array.count {|coord| @cells[coord].empty?} == coord_array.length
     check_coord = coord_array.map {|coord| coord.chars}
+    # in_row/in_column should be three methods
     in_row = (check_coord.all? {|nest_arr| check_coord[0][0] == nest_arr[0]}) && (check_coord.map {|nest_arr| nest_arr[1]} == (check_coord[0][1]..check_coord[-1][1]).to_a)
     in_column = (check_coord.all? {|nest_arr| check_coord[0][1] == nest_arr[1]}) && (check_coord.map {|nest_arr| nest_arr[0]} == (check_coord[0][0]..check_coord[-1][0]).to_a)
     if (in_row || in_column) && length_fit && no_other_ship

@@ -6,6 +6,7 @@ class Cell
     @fired_upon = false
   end
 
+  # @ship.nil? (return true or false)
   def empty?
     if @ship == nil
       true
@@ -31,6 +32,7 @@ class Cell
     end
   end
 
+  # try axing the first 2, == true is extra just do true, if == false just do !object
   def render(value = false)
     if value && @fired_upon == true && @ship != nil && ship.sunk? == true
       return "X"

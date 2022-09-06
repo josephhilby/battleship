@@ -32,6 +32,7 @@ class Game
 
   def place_cruiser
     counter = 0
+    # Pick a point then build in each 4 directions.
     until @player_cpu.board.valid_placement?(@player_cpu.cruiser, [@first_cell, @second_cell, @third_cell])
       @second_cell = @player_cpu.cpu_moves.sample
       @third_cell = @player_cpu.cpu_moves.sample
