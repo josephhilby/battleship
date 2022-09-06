@@ -1,5 +1,5 @@
 class Player
-  attr_reader :cpu, :board, :cruiser, :submarine
+  attr_reader :cpu, :board, :cruiser, :submarine, :cpu_moves
   def initialize(cpu = false)
     @board = Board.new
     @cruiser = Ship.new("Cruiser", 3)
@@ -18,7 +18,7 @@ class Player
   def player_move
     puts "Enter the coordinate for your shot:"
     loop do
-      player_move = gets.chomp
+      player_move = gets.chomp.upcase
       if @board.valid_coordinate?(player_move)
         return player_move
       else
