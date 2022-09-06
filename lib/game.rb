@@ -30,6 +30,10 @@ class Game
       end
   end
 
+  # In testing cpu places ship with counter at around 100-200. Will need to refactor
+  # if ship is bigger or more than 2 ships are used. If counter is reached, cpu will
+  # select 3 bad coord and not place ship. Game is then unwinnable for player.
+  # Currently this is unlikely, as 16 ** 3 == 4_096 and counter can go to 100_000.
   def place_cruiser
     counter = 0
     until @player_cpu.board.valid_placement?(@player_cpu.cruiser, [@first_cell, @second_cell, @third_cell])
