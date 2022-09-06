@@ -9,11 +9,11 @@ class Game
     @second_cell = @player_cpu.cpu_moves.sample
     @third_cell = @player_cpu.cpu_moves.sample
   end
-  
+
   def debug_mode(true_or_false)
     @debug_mode = true_or_false
   end
-  
+
   def start
     puts "Welcome to BATTLESHIP!"
     puts "Enter p to play. Enter q to quit."
@@ -29,7 +29,7 @@ class Game
         end
       end
   end
-    
+
   def place_cruiser
     counter = 0
     until @player_cpu.board.valid_placement?(@player_cpu.cruiser, [@first_cell, @second_cell, @third_cell])
@@ -42,7 +42,7 @@ class Game
     end
     @player_cpu.board.place(@player_cpu.cruiser, [@first_cell, @second_cell, @third_cell])
   end
-  
+
   def place_submarine
     counter = 0
     until @player_cpu.board.valid_placement?(@player_cpu.submarine, [@first_cell, @second_cell])
@@ -55,13 +55,13 @@ class Game
     end
     @player_cpu.board.place(@player_cpu.submarine, [@first_cell, @second_cell])
   end
-    
+
   def cpu_set_up
     self.place_cruiser
     self.place_submarine
     self.player_setup_cruiser
   end
-  
+
   def player_setup_cruiser
     puts "I have placed my ships on the grid."
     puts "You now need to place your ships."
@@ -77,7 +77,7 @@ class Game
     @player_one.board.place(@player_one.cruiser, @player_cruiser_input)
     self.player_setup_submarine
   end
-  
+
   def player_setup_submarine
     puts @player_one.board.render(true)
     puts "Enter the coordinates for the Submarine (2 spaces):"
@@ -91,9 +91,9 @@ class Game
     puts @player_one.board.render(true)
     self.run
   end
-  
+
   def run
-    loop do 
+    loop do
       @current_turn = Turn.new(@player_one, @player_cpu)
       cpu_move = @current_turn.cpu_turn
       player_move = @current_turn.player_turn
@@ -101,7 +101,7 @@ class Game
       puts @current_turn.player_one_turn_result(player_move)
       if @debug_mode
         puts @current_turn.debug_turn_render_result
-      else 
+      else
         puts @current_turn.turn_render_result
       end
       if @player_one.has_lost? || @player_cpu.has_lost?
