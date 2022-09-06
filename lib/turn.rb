@@ -49,7 +49,7 @@ class Turn
     "==============PLAYER BOARD==============\n" +
     "#{@player_one.board.render(true)}"
   end
-  
+
   def debug_turn_render_result
     "=============COMPUTER BOARD=============\n" +
     "#{@player_cpu.board.render(true)}" +
@@ -62,6 +62,8 @@ class Turn
       puts "I won!"
     elsif @player_cpu.has_lost?
       puts "You won!"
+    else
+      false
     end
   end
 end

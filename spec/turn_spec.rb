@@ -32,7 +32,7 @@ RSpec.describe Turn do
     player_cpu.board.place(player_cpu.cruiser, ["A1", "A2", "A3"])
     player_1.board.place(player_1.cruiser, ["A1", "A2", "A3"])
 
-    expect(turn.turn_render).to eq("=============COMPUTER BOARD=============\n" + "  1 2 3 4 \nA . . . . \nB . . . . \nC . . . . \nD . . . . \n" + "==============PLAYER BOARD==============\n" + "  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
+    expect(turn.turn_render_result).to eq("=============COMPUTER BOARD=============\n" + "  1 2 3 4 \nA . . . . \nB . . . . \nC . . . . \nD . . . . \n" + "==============PLAYER BOARD==============\n" + "  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
   end
 
   it "Test 4: will print player and computer moves" do
@@ -99,19 +99,6 @@ RSpec.describe Turn do
     turn.cpu_move = "D1"
     turn.player_one_turn_result(turn.player_move)
     turn.cpu_turn_result(turn.cpu_move)
-    expect(turn.game_loss?).to eq("You won!")
+    expect(turn.game_loss?).to eq(nil) # Had to use puts on line 62 & 64
   end
 end
-
-# Move test to Game class debug mode once made
-  # it "Test 4: will render both boards in debug mode" do
-  #   player_1 = Player.new
-  #   player_cpu = Player.new(true)
-  #   turn = Turn.new(player_1, player_cpu)
-
-  #   player_cpu.board.place(cruiser, ["A1", "A2", "A3"])
-  #   player_1.board.place(cruiser, ["A1", "A2", "A3"])
-
-  #   expect(player_cpu.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
-  #   expect(player_1.board.render(true)).to eq("  1 2 3 4 \nA S S S . \nB . . . . \nC . . . . \nD . . . . \n")
-  # end
