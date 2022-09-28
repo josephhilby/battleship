@@ -34,7 +34,7 @@
     <img src="images/Battleship_game_board.svg" alt="Logo" width="100" height="100">
   </a>
 
-<h3 align="center">War-or-Peace</h3>
+<h3 align="center">Battleship</h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
