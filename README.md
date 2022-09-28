@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/josephhilby/battleship">
-    <img src="images/Wojna_gra_karciana.jpeg" alt="Logo" width="300" height="100">
+    <img src="images/Battleship_game_board.svg" alt="Logo" width="100" height="100">
   </a>
 
 <h3 align="center">War-or-Peace</h3>
@@ -86,7 +86,8 @@ Clone this repo. Navigate to the root directory, then run ```ruby battleship_run
 ## Contact
 
 Joseph Hilby - Joseph.Hilby@gmail.com
-Max MacGillivray - 
+
+Max MacGillivray - [https://github.com/MoxieMax](https://github.com/MoxieMax)
 
 Project Link: [https://github.com/josephhilby/battleship](https://github.com/josephhilby/battleship)
 
@@ -103,7 +104,7 @@ Project Link: [https://github.com/josephhilby/battleship](https://github.com/jos
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[contributors-url]: https://github.com/josephhilby/battleship/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
 [forks-url]: https://github.com/github_username/repo_name/network/members
 [stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
