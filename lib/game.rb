@@ -15,6 +15,8 @@ class Game
   end
 
   def start
+    @player_one = Player.new
+    @player_cpu = Player.new(true)
     puts "Welcome to BATTLESHIP!"
     puts "Enter p to play. Enter q to quit."
     loop do
