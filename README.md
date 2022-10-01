@@ -31,13 +31,14 @@
 <br />
 <div align="center">
   <a href="https://github.com/josephhilby/battleship">
-    <img src="images/Battleship_game_board.svg" alt="Logo" width="100" height="100">
+    <img src="images/battleship.jpeg" alt="Logo" width="300" height="150">
   </a>
 
 <h3 align="center">Battleship</h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
+<!--
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -55,19 +56,15 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
+-->
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 This was a team project given while at the Turing School of Software Design. The project goal was to enable a game of Battleship [https://en.wikipedia.org/wiki/Battleship_(game)](https://en.wikipedia.org/wiki/Battleship_(game)) to be played between a human and computer opponents in the Terminal.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Built With
 
 * Ruby
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -80,8 +77,6 @@ Clone this repo. Navigate to the root directory, then run ```ruby battleship_run
 - [x] Run War in the Terminal
 - [ ] Develop simple frontend interface
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CONTACT -->
 ## Contact
 
@@ -91,15 +86,10 @@ Max MacGillivray - [https://github.com/MoxieMax](https://github.com/MoxieMax)
 
 Project Link: [https://github.com/josephhilby/battleship](https://github.com/josephhilby/battleship)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []() Turing School of Software Design [https://turing.edu/](https://turing.edu/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+* Turing School of Software Design: [https://turing.edu/](https://turing.edu/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
