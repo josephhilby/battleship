@@ -81,11 +81,9 @@ Clone this repo. Navigate to the root directory, then run ```ruby battleship_run
 <!-- CONTACT -->
 ## Contact
 
-Joseph Hilby - Joseph.Hilby@gmail.com
+Joseph Hilby - [https://github.com/josephhilby/](https://github.com/josephhilby/)
 
 Max MacGillivray - [https://github.com/MoxieMax](https://github.com/MoxieMax)
-
-Project Link: [https://github.com/josephhilby/battleship](https://github.com/josephhilby/battleship)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
