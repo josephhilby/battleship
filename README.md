@@ -63,7 +63,6 @@
 
 This was a team project given while at the Turing School of Software Design. The project goal was to enable a game of Battleship [https://en.wikipedia.org/wiki/Battleship_(game)](https://en.wikipedia.org/wiki/Battleship_(game)) to be played between a human and computer opponents in the Terminal.
 
-This was a team project given while at the Turing School of Software Design. The project goal was to enable a game of Battleship [https://en.wikipedia.org/wiki/Battleship_(game)](https://en.wikipedia.org/wiki/Battleship_(game)) to be played between a human and computer opponent in the Terminal.
 ### Built With
 
 * Ruby
